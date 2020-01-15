@@ -8,13 +8,13 @@
 
 import time
 import re
-import Enum
+from enum import Enum
 import paho.mqtt.client as mqtt
 
 from conf.HectorConfig import config
 
-#from HectorHardware import HectorHardware as Hector
-from HectorSimulator import HectorSimulator as Hector
+from HectorHardware import HectorHardware as Hector
+#from HectorSimulator import HectorSimulator as Hector
 
 
 # global vars

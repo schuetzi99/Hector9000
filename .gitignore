@@ -96,3 +96,10 @@ src/log
 *.py-0
 
 *.py-1
+
+# by klaus
+src/valveopen.py
+src/valveclose.py
+src/clean.py
+.gitignore
+

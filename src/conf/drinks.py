@@ -1,136 +1,474 @@
 # drinks_more_recipes.py
 drink_list = [
     {
-        "name": "Extra Schuss Mate",
-        "recipe": [("ingr", "mate", 50)]
-    }, {
-        "name": "Moscow Mule",
+        "name": "Alice",
         "recipe": [
-            ("ingr", "vodka", 60),
-            ("ingr", "lime", 10),
-            ("ingr", "gibe", 180)
+            ("ingr", "sahne", 20),
+            ("ingr", "ananass", 80),
+            ("ingr", "orangens", 80),
+            ("ingr", "gren", 20),
         ]
     }, {
-        "name": "Gin & Tonic",
-        "color": "white",
+        "name": "Alice Deluxe",
         "recipe": [
-            ("ingr", "gin", 40),
-            ("ingr", "tonic", 120),
+            ("ingr", "sahne", 20),
+            ("ingr", "ananass", 80),
+            ("ingr", "orangens", 60),
+            ("ingr", "gren", 20),
+            ("ingr", "wodka", 20),
         ]
     }, {
-        "name": "Screwdriver",
-        "color": "orange",
+        "name": "Bacardi Sunrise",
         "recipe": [
-            ("ingr", "vodka", 40),
-            ("ingr", "oj", 120),
-            ("stir", True),
+            ("ingr", "bacardi", 40),
+            ("ingr", "zitronens", 10),
+            ("ingr", "orangens", 100),
+            ("ingr", "gren", 10),
+        ]
+    }, {
+        "name": "Bacardi Cola",
+        "recipe": [
+            ("ingr", "bacardi", 40),
+            ("ingr", "cola", 200),
+        ]
+    }, {
+        "name": "Balalaika",
+        "recipe": [
+            ("ingr", "wodka", 40),
+            ("ingr", "zitronens", 10),
+            ("ingr", "orangenl", 20),
+        ]
+    }, {
+        "name": "Ballerina",
+        "recipe": [
+            ("ingr", "ananass", 40),
+            ("ingr", "zitronens", 15),
+            ("ingr", "orangens", 40),
+        ]
+    }, {
+        "name": "Baltic",
+        "recipe": [
+            ("ingr", "wodka", 40),
+            ("ingr", "curacao", 10),
+            ("ingr", "maracujas", 20),
+            ("ingr", "orangens", 100),
+        ]
+    }, {
+        "name": "Barbados Cocktail",
+        "recipe": [
+            ("ingr", "bacardi", 30),
+            ("ingr", "orangenl", 5),
+            ("ingr", "ananass", 15),
+        ]
+    }, {
+        "name": "Barbados Dream",
+        "recipe": [
+            ("ingr", "kokos", 15),
+            ("ingr", "zitronens", 10),
+            ("ingr", "ananass", 40),
+            ("ingr", "maracujas", 40),
+        ]
+    }, {
+        "name": "Berry Me In The Sand",
+        "recipe": [
+            ("ingr", "wodka", 20),
+            ("ingr", "orangenl", 15),
+            ("ingr", "orangens", 100),
+        ]
+    }, {
+        "name": "Best of Green",
+        "recipe": [
+            ("ingr", "tequila", 25),
+            ("ingr", "curacao", 18),
+            ("ingr", "kokos", 18),
+            ("ingr", "zitronens", 7),
+            ("ingr", "maracujas", 80),
+        ]
+    }, {
+        "name": "Black Thunder",
+        "recipe": [
+            ("ingr", "wodka", 40),
+            ("ingr", "curacao", 20),
+            ("ingr", "cola", 160),
+        ]
+    }, {
+        "name": "Blue Hawaii",
+        "recipe": [
+            ("ingr", "bacardi", 15),
+            ("ingr", "curacao", 15),
+            ("ingr", "sahne", 20),
+        ]
+    }, {
+        "name": "Blue Hawaii 3",
+        "recipe": [
+            ("ingr", "bacardi", 10),
+            ("ingr", "orangenl", 10),
+            ("ingr", "curacao", 10),
+            ("ingr", "sahne", 20),
+        ]
+    }, {
+        "name": "Blue Hawaiian",
+        "recipe": [
+            ("ingr", "malibu", 20),
+            ("ingr", "curacao", 20),
+            ("ingr", "ananass", 60),
+        ]
+    }, {
+        "name": "Blue Lagoon",
+        "recipe": [
+            ("ingr", "wodka", 30),
+            ("ingr", "curacao", 20),
+            ("ingr", "ananass", 70),
+        ]
+    }, {
+        "name": "Blue Wolga",
+        "recipe": [
+            ("ingr", "wodka", 50),
+            ("ingr", "curacao", 10),
+            ("ingr", "tonic", 70),
+        ]
+    }, {
+        "name": "Bora Bora",
+        "recipe": [
+            ("ingr", "ananass", 10),
+            ("ingr", "maracujas", 60),
+            ("ingr", "zitronens", 10),
+            ("ingr", "gren", 10),
+        ]
+    }, {
+        "name": "Brasilian Sunrise",
+        "recipe": [
+            ("ingr", "cachaca", 40),
+            ("ingr", "gren", 20),
+            ("ingr", "zitronens", 10),
+            ("ingr", "orangens", 100),
+        ]
+    }, {
+        "name": "Cococabana",
+        "recipe": [
+            ("ingr", "malibu", 30),
+            ("ingr", "bacardi", 30),
+            ("ingr", "ananass", 80),
+        ]
+    }, {
+        "name": "Don Juan",
+        "recipe": [
+            ("ingr", "43", 20),
+            ("ingr", "orangens", 60),
+        ]
+    }, {
+        "name": "Exotic",
+        "recipe": [
+            ("ingr", "orangens", 90),
+            ("ingr", "ananass", 60),
+            ("ingr", "mangos", 30),
+            ("ingr", "curacao", 15),
+            ("ingr", "kokos", 15),
+        ]
+    }, {
+        "name": "Exotic Blue",
+        "recipe": [
+            ("ingr", "ananass", 60),
+            ("ingr", "sahne", 15),
+            ("ingr", "curacao", 30),
+        ]
+    }, {
+        "name": "Festini",
+        "recipe": [
+            ("ingr", "wodka", 20),
+            ("ingr", "sahne", 15),
+            ("ingr", "maracujas", 60),
+        ]
+    }, {
+        "name": "Formula One",
+        "recipe": [
+            ("ingr", "malibu", 20),
+            ("ingr", "bacardi", 40),
+            ("ingr", "ananass", 80),
+            ("ingr", "gren", 15),
+        ]
+    }, {
+        "name": "Gloom Chaser",
+        "recipe": [
+            ("ingr", "orangenl", 20),
+            ("ingr", "gren", 10),
+            ("ingr", "zitronens", 5),
+        ]
+    }, {
+        "name": "Golden Sunrise",
+        "recipe": [
+            ("ingr", "bacardi", 60),
+            ("ingr", "gren", 20),
+            ("ingr", "zitronens", 5),
+            ("ingr", "orangens", 10),
+            ("ingr", "ananass", 10),
+        ]
+    }, {
+        "name": "Grand Marnier",
+        "recipe": [
+            ("ingr", "curacao", 100),
+            ("ingr", "orangenl", 15),
+        ]
+    }, {
+        "name": "Grand Marnier Tonic",
+        "recipe": [
+            ("ingr", "orangenl", 15),
+            ("ingr", "tonic", 100),
+        ]
+    }, {
+        "name": "Gruene Witwe",
+        "recipe": [
+            ("ingr", "curacao", 40),
+            ("ingr", "orangens", 100),
+        ]
+    }, {
+        "name": "Indianapolis",
+        "recipe": [
+            ("ingr", "curacao", 20),
+            ("ingr", "wodka", 20),
+            ("ingr", "sahne", 20),
+        ]
+    }, {
+        "name": "Kangaroo Jumper",
+        "recipe": [
+            ("ingr", "wodka", 20),
+            ("ingr", "kokos", 30),
+            ("ingr", "curacao", 10),
+            ("ingr", "ananass", 30),
+        ]
+    }, {
+        "name": "Kaept'n Chaos",
+        "recipe": [
+            ("ingr", "bacardi", 20),
+            ("ingr", "wodka", 15),
+            ("ingr", "gin", 10),
+            ("ingr", "orangens", 30),
+            ("ingr", "maracujas", 20),
+            ("ingr", "zitronens", 3),
+        ]
+    }, {
+        "name": "Lemon Drop Martini",
+        "recipe": [
+            ("ingr", "wodka", 30),
+            ("ingr", "orangenl", 15),
+            ("ingr", "zitronens", 10),
+        ]
+    }, {
+        "name": "Little Devil",
+        "recipe": [
+            ("ingr", "bacardi", 30),
+            ("ingr", "gin", 20),
+            ("ingr", "orangenl", 15),
+            ("ingr", "zitronens", 15),
+        ]
+    }, {
+        "name": "Los Angeles",
+        "recipe": [
+            ("ingr", "wodka", 25),
+            ("ingr", "zitronens", 10),
+            ("ingr", "orangens", 60),
+            ("ingr", "ananass", 20),
+            ("ingr", "maracujas", 20),
+            ("ingr", "gren", 20),
+        ]
+    }, {
+        "name": "Magnolia Blossom",
+        "recipe": [
+            ("ingr", "gin", 30),
+            ("ingr", "zitronens", 10),
+            ("ingr", "sahne", 15),
+        ]
+    }, {
+        "name": "Malibu Cola",
+        "recipe": [
+            ("ingr", "malibu", 20),
+            ("ingr", "cola", 60),
+        ]
+    }, {
+        "name": "Malibu Cranberry",
+        "recipe": [
+            ("ingr", "malibu", 20),
+            ("ingr", "cranb", 60),
+        ]
+    }, {
+        "name": "Malibu Ananass",
+        "recipe": [
+            ("ingr", "malibu", 20),
+            ("ingr", "ananass", 60),
+        ]
+    }, {
+        "name": "Malibu Maracuja",
+        "recipe": [
+            ("ingr", "malibu", 20),
+            ("ingr", "maracujas", 60),
+        ]
+    }, {
+        "name": "Malibu Orange",
+        "recipe": [
+            ("ingr", "malibu", 20),
+            ("ingr", "orangens", 60),
+        ]
+    }, {
+        "name": "Maracolada",
+        "recipe": [
+            ("ingr", "kokos", 20),
+            ("ingr", "sahne", 20),
+            ("ingr", "maracujas", 65),
+        ]
+    }, {
+        "name": "Miami Cocktail",
+        "recipe": [
+            ("ingr", "bacardi", 40),
+            ("ingr", "zitronens", 10),
+            ("ingr", "orangenl", 20),
+        ]
+    }, {
+        "name": "Cola 43",
+        "recipe": [
+            ("ingr", "43", 20),
+            ("ingr", "cola", 60),
+        ]
+    }, {
+        "name": "Pina Colada",
+        "recipe": [
+            ("ingr", "bacardi", 25),
+            ("ingr", "sahne", 15),
+            ("ingr", "kokos", 10),
+            ("ingr", "ananass", 50),
+        ]
+    }, {
+        "name": "Pink Pussycat",
+        "recipe": [
+            ("ingr", "wodka", 40),
+            ("ingr", "gren", 10),
+            ("ingr", "ananass", 100),
+        ]
+    }, {
+        "name": "Pinky Colada",
+        "recipe": [
+            ("ingr", "bacardi", 30),
+            ("ingr", "gren", 10),
+            ("ingr", "kokos", 10),
+            ("ingr", "sahne", 15),
+            ("ingr", "ananass", 50),
+        ]
+    }, {
+        "name": "Pussycat",
+        "recipe": [
+            ("ingr", "orangens", 50),
+            ("ingr", "sahne", 20),
+            ("ingr", "ananass", 50),
+            ("ingr", "curacao", 20),
+        ]
+    }, {
+        "name": "Red Lion",
+        "recipe": [
+            ("ingr", "orangenl", 20),
+            ("ingr", "gin", 30),
+            ("ingr", "orangens", 40),
+            ("ingr", "zitronens", 10),
+            ("ingr", "gren", 10),
+        ]
+    }, {
+        "name": "Screw Driver",
+        "recipe": [
+            ("ingr", "wodka", 50),
+            ("ingr", "orangens", 150),
+        ]
+    }, {
+        "name": "Soft Poison",
+        "recipe": [
+            ("ingr", "curacao", 20),
+            ("ingr", "orangens", 160),
+        ]
+    }, {
+        "name": "Sunset",
+        "recipe": [
+            ("ingr", "cola", 70),
+            ("ingr", "orangens", 100),
+            ("ingr", "gren", 30),
         ]
     }, {
         "name": "Virgin Sunrise",
-        "color": "red",
         "recipe": [
-            ("ingr", "oj", 140),
-            ("ingr", "gren", 15),
-            ("umb", True),
+            ("ingr", "orangens", 90),
+            ("ingr", "maracujas", 80),
+            ("ingr", "gren", 30),
         ]
     }, {
-        "name": "Tequila Sunrise",
-        "color": "darkred",
+        "name": "Virgin Pina Colada",
         "recipe": [
-            ("ping", True),
-            ("ingr", "tequila", 50),
-            ("ping", True),
-            ("ingr", "oj", 150),
-            ("shake", True),
-            ("ingr", "gren", 15),
-            ("umb", True),
-        ]
-    },
-    {
-        "name": "Tschunk",
-        "recipe": [
-            ("ingr", "rum", 40),
-            ("ingr", "mate", 120)
+            ("ingr", "kokos", 15),
+            ("ingr", "sahne", 10),
+            ("ingr", "ananass", 70),
         ]
     }, {
-        "name": "Caipirinha",
+        "name": "Tropic Star",
         "recipe": [
-            ("ingr", "rum", 40),
-            ("ingr", "gga", 120)
+            ("ingr", "orangens", 80),
+            ("ingr", "ananass", 80),
+            ("ingr", "maracujas", 80),
         ]
     }, {
-        "name": "Gin and Sin",
+        "name": "White Lady",
         "recipe": [
-            ("ingr", "gin", 35),
-            ("ingr", "lime", 20),
-            ("ingr", "gren", 5),
-            ("ingr", "oj", 40)
+            ("ingr", "orangenl", 20),
+            ("ingr", "gin", 20),
+            ("ingr", "zitronens", 20),
         ]
     }, {
-        "name": "Horny Bull",
+        "name": "Wodka Tonic",
         "recipe": [
-            ("ingr", "tequila", 20),
-            ("ingr", "oj", 120)
+            ("ingr", "wodka", 20),
+            ("ingr", "tonic", 100),
         ]
     }, {
-        "name": "Monkey Gland",
-        "recipe": [
-            ("ingr", "gin", 30),
-            ("ingr", "oj", 40),
-            ("ingr", "gren", 5)
-        ]
+        "name": "Extra Schuss Bacardi",
+        "recipe": [("ingr", "bacardi", 20)]
     }, {
-        "name": "Margarita",
-        "recipe": [
-            ("ingr", "vodka", 20),
-            ("ingr", "oj", 120)
-        ]
+        "name": "Extra Schuss Cranberry Sirup",
+        "recipe": [("ingr", "cranb", 20)]
     }, {
-        "name": "Shirley Temple",
-        "recipe": [
-            ("ingr", "gga", 100),
-            ("ingr", "gren", 5)
-        ]
+        "name": "Extra Schuss Cola",
+        "recipe": [("ingr", "cola", 50)]
     }, {
-        "name": "Raspberry Zero",
-        "recipe": [
-            ("ingr", "oj", 160),
-            ("ingr", "pine", 60),
-            ("ingr", "gren", 20)
-        ]
+        "name": "Extra Schuss Wodka",
+        "recipe": [("ingr", "wodka", 20)]
     }, {
-        "name": "Raspberry Pi",
-        "recipe": [
-            ("ingr", "oj", 140),
-            ("ingr", "pine", 60),
-            ("ingr", "gren", 20),
-            ("ingr", "vodka", 20)
-        ]
+        "name": "Extra Schuss O-Saft",
+        "recipe": [("ingr", "orangens", 50)]
     }
 ]
 
 # -> Read out of DB
 ingredients = {
     # code				text		is_alcoholic?
-    "gin": ("Gin", True),
-    "rum": ("Rum", True),
-    "vodka": ("Vodka", True),
-    "tequila": ("Tequila", True),
-    "tonic": ("Tonic Water", False),
-    "coke": ("Coke", False),
-    "oj": ("Orange Juice", False),
-    "gren": ("Grenadine", False),
-    "mmix": ("Margarita Mix", True),
-    "mate": ("Mate", False),
-    "pine": ("Pineapple Juice", False),
-    "raspberry": ("Raspberry", False),
+    # ohne Alkohol
+    "ananass": ("Ananassaft", False),
+    "cola": ("Cola", False),
+    "cranb": ("Cranberry Sirup", False),
     "gga": ("Ginger Ale", False),
-    "cocos": ("Cocos", False),
-    "mango": ("Mango Juice", False),
-    "lms": ("Limettensaft", False),
-    "coin": ("Cointreau", True),
-    "lime": ("Lime", False),
-    "gibe": ("Ginger Beer", False)
+    "gren": ("Grenadine", False),
+    "kokos": ("Kokossirup", False),
+    "mate": ("Mate", False),
+    "mangos": ("Mangosaft", False),
+    "maracujas": ("Maracujasaft", False),
+    "orangens": ("Orangensaft", False),
+    "sahne": ("Sahne", False),
+    "tonic": ("Tonic Water", False),
+    "zitronens": ("Zitronensaft", False),
+    # mit Alkohol
+    "43": ("43", True),
+    "gin": ("Gin", True),
+    "bacardi": ("Bacardi", True),
+    "curacao": ("Blue Curacao", True),
+    "cachaca": ("Cachaca Pitu", True),
+    "malibu": ("Malibu", True),
+    "orangenl": ("Orangenlikör", True),
+    "rum": ("Rum", True),
+    "tequila": ("Tequila", True),
+    "wodka": ("Wodka", True),
+    "whisky": ("Whisky", True),
 }
 
 actions = {
@@ -144,7 +482,8 @@ actions = {
 }
 
 # To DB -> replace
-available_ingredients = ["gren", "rum", "vodka", "gin", "tequila", "gibe", "lime", "tonic", "mate", "gga", "pine", "oj"]
+#available_ingredients = ["gren", "rum", "vodka", "gin", "tequila", "gibe", "lime", "tonic", "mate", "gga", "pine", "oj"]
+available_ingredients = ["gren", "bacardi", "wodka", "orangens", "zitronens", "maracujas", "tonic", "orangenl", "sahne", "curacao", "ananass", "kokos"]
 
 
 def doable(drink, available):

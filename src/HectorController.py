@@ -6,7 +6,7 @@ import webcolors
 import paho.mqtt.client as mqtt
 import time
 import traceback
-import Enum
+from enum import Enum
 
 class Verbose_Level(Enum):
     DEGUB = 0

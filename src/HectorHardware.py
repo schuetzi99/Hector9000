@@ -9,7 +9,8 @@
 from __future__ import division
 
 from time import sleep, time
-import sys, Enum
+import sys
+from enum import  Enum
 
 from HectorAPI import HectorAPI
 from conf.HectorConfig import config
@@ -27,7 +28,8 @@ import logging
 
 
 ## initialization
-logging.basicConfig(level=logging.CRITICAL)
+#logging.basicConfig(level=logging.CRITICAL)
+logging.basicConfig(level=logging.DEBUG)
 
 
 class Verbose_Level(Enum):
@@ -65,8 +67,8 @@ class HectorHardware(HectorAPI):
         GPIO.setmode(GPIO.BOARD)
 
         # setup scale (HX711)
-        hx1 = cfg["hx711"]["CLK"]
-        hx2 = cfg["hx711"]["DAT"]
+        hx1 = cfg["hx711"]["DAT"]
+        hx2 = cfg["hx711"]["CLK"]
         hxref = cfg["hx711"]["ref"]
         self.hx = HX711(hx1, hx2)
         self.hx.set_reading_format("LSB", "MSB")
@@ -95,6 +97,9 @@ class HectorHardware(HectorAPI):
         self.armDir = cfg["a4988"]["DIR"]
         self.armNumSteps = cfg["a4988"]["numSteps"]
         self.arm = cfg["arm"]["SENSE"]
+        self.armMs1 = cfg["a4988"]["MS1"]
+        self.armMs2 = cfg["a4988"]["MS2"]
+        self.armMs3 = cfg["a4988"]["MS2"]
         GPIO.setup(self.armEnable, GPIO.OUT)
         GPIO.output(self.armEnable, True)
         GPIO.setup(self.armReset, GPIO.OUT)
@@ -102,6 +107,12 @@ class HectorHardware(HectorAPI):
         GPIO.setup(self.armSleep, GPIO.OUT)
         GPIO.output(self.armSleep, True)
         GPIO.setup(self.armStep, GPIO.OUT)
+        GPIO.setup(self.armMs1, GPIO.OUT)
+        GPIO.output(self.armMs1, True)
+        GPIO.setup(self.armMs2, GPIO.OUT)
+        GPIO.output(self.armMs2, True)
+        GPIO.setup(self.armMs3, GPIO.OUT)
+        GPIO.output(self.armMs3, True)
         GPIO.setup(self.armDir, GPIO.OUT)
         GPIO.setup(self.arm, GPIO.IN)
         GPIO.setup(self.lightPin, GPIO.OUT)
@@ -125,7 +136,7 @@ class HectorHardware(HectorAPI):
         armMaxSteps = int(self.armNumSteps * 1.1)
         GPIO.output(self.armEnable, False)
         log("move arm out")
-        GPIO.output(self.armDir, True)
+        GPIO.output(self.armDir, False)
         for i in range(armMaxSteps):
             if self.arm_isInOutPos():
                 GPIO.output(self.armEnable, True)
@@ -133,9 +144,9 @@ class HectorHardware(HectorAPI):
                 if cback: cback("arm_out", 100)
                 return
             GPIO.output(self.armStep, False)
-            sleep(.001)
+            sleep(.0001)
             GPIO.output(self.armStep, True)
-            sleep(.001)
+            sleep(.0001)
             if cback: cback("arm_out", i * 100 / self.armNumSteps)
         GPIO.output(self.armEnable, True)
         log("arm is in OUT position (with timeout)")
@@ -144,12 +155,12 @@ class HectorHardware(HectorAPI):
         self.arm_out(cback)
         GPIO.output(self.armEnable, False)
         log("move arm in")
-        GPIO.output(self.armDir, False)
+        GPIO.output(self.armDir, True)
         for i in range(self.armNumSteps, 0, -1):
             GPIO.output(self.armStep, False)
-            sleep(.001)
+            sleep(.0001)
             GPIO.output(self.armStep, True)
-            sleep(.001)
+            sleep(.0001)
             if cback and (i % 10 == 0): cback("arm_in", i * 100 / self.armNumSteps)
         GPIO.output(self.armEnable, True)
         log("arm is in IN position")
@@ -199,7 +210,7 @@ class HectorHardware(HectorAPI):
         log("close valve")
         self.valve_open(index, open=0)
 
-    def valve_dose(self, index, amount, timeout=30, cback=None, progress=(0,100), topic=""):
+    def valve_dose(self, index, amount, timeout=600, cback=None, progress=(0,100), topic=""):
         log("dose channel %d, amount %d" % (index, amount))
         if index < 0 and index >= len(self.valveChannels) - 1:
             return -1
@@ -212,16 +223,20 @@ class HectorHardware(HectorAPI):
         self.valve_open(index)
         sr = self.scale_readout()
         if sr < -10:
+            self.scale_tare()
             amount = amount + sr
             balance = False
         last_over = False
         last = sr
         while True:
             sr = self.scale_readout()
-            if balance and sr < -10:
+            print (sr)
+            #if balance and sr < -10:
+            if sr < -10:
                 warning("weight abnormality: scale balanced")
                 amount = amount + sr
                 balance = False
+                self.scale_tare()
             if sr > amount:
                 if last_over:
                     log("dosing complete")
@@ -240,7 +255,8 @@ class HectorHardware(HectorAPI):
                 self.pump_stop()
                 self.valve_close(index)
                 if cback: cback(progress[0] + progress[1])
-                return False
+                break
+                #return False
             sleep(0.1)
         self.pump_stop()
         self.valve_close(index)
