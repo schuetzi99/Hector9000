@@ -39,12 +39,13 @@ class Verbose_Level(Enum):
     SILENT = 3
 
 
-VERBOSE_LEVEL = Verbose_Level.DEGUB
+#VERBOSE_LEVEL = Verbose_Level.DEGUB
+VERBOSE_LEVEL = 1
 
 
 def log(message):
     if VERBOSE_LEVEL == 0:
-        log("" + str(message))
+        print("" + str(message))
 
 
 def error(message):
@@ -210,8 +211,9 @@ class HectorHardware(HectorAPI):
         log("close valve")
         self.valve_open(index, open=0)
 
-    def valve_dose(self, index, amount, timeout=600, cback=None, progress=(0,100), topic=""):
+    def valve_dose(self, index, amount, timeout=30, cback=None, progress=(0,100), topic=""):
         log("dose channel %d, amount %d" % (index, amount))
+        timeout=25
         if index < 0 and index >= len(self.valveChannels) - 1:
             return -1
         if not self.arm_isInOutPos():
@@ -224,17 +226,17 @@ class HectorHardware(HectorAPI):
         sr = self.scale_readout()
         if sr < -10:
             self.scale_tare()
-            amount = amount + sr
-            balance = False
+            #amount = amount + sr
+            #balance = False
         last_over = False
         last = sr
         while True:
             sr = self.scale_readout()
-            print (sr)
+            log(sr)
             #if balance and sr < -10:
             if sr < -10:
                 warning("weight abnormality: scale balanced")
-                amount = amount + sr
+                #amount = amount + sr
                 balance = False
                 self.scale_tare()
             if sr > amount:

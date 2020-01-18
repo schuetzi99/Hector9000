@@ -32,7 +32,8 @@ class Verbose_Level(Enum):
     ERROR = 2
     SILENT = 3
 
-VERBOSE_LEVEL = Verbose_Level.DEGUB
+#VERBOSE_LEVEL = Verbose_Level.DEGUB
+VERBOSE_LEVEL = 1
 
 def log(message):
     if VERBOSE_LEVEL == 0:

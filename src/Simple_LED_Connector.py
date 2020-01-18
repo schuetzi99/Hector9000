@@ -16,7 +16,8 @@ class Simple_LED_Connector(LEDStripAPI):
             (0, 255, 0),
             (0, 255, 255),
             (0, 0, 255),
-            (255, 0, 255)
+            (255, 0, 255),
+            (255, 0, 120),
         ]
         self.col_neutral = (80, 80, 30)
         self.NUMCOLS = len(self.cols)
@@ -77,7 +78,11 @@ class Simple_LED_Connector(LEDStripAPI):
         while True:
             for c in range(self.NUMCOLS):
                 for i in range(self.NUM - self.NUMBASE):
-                    self.pixels[self.NUMBASE + i] = self.cols[c]
+                    #print("c %d, i %d" % (c, i))
+                    if (c + 1) % 2:
+                        self.pixels[self.NUMBASE + i] = self.cols[c]
+                    else:
+                        self.pixels[self.NUM - i -1] = self.cols[c]
                     if self.mode == 1:
                         time.sleep(.01)
                     else:
