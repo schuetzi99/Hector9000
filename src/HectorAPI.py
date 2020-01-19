@@ -74,5 +74,14 @@ class HectorAPI(object, metaclass=abc.ABCMeta):
         pass
 
     @abc.abstractmethod
-    def cleanAndExit(self):
+    def clean_and_exit(self):
         pass
+    
+    @abc.abstractmethod
+    def clean(self):
+        pass
+    
+    @abc.abstractmethod
+    def dry(self):
+        pass
+

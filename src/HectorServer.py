@@ -158,29 +158,32 @@ def do_ping(num, retract):
 
 # high-level functions
 
-def dry(pump):
+def do_dry(pump):
     log("drying pump %d" % pump)
     hector.valve_open(pump)
     time.sleep(20)
     hector.valve_open(pump, 0)
 
 
-def clean(pump):
-    print("cleaning pump %d" % pump)
+def do_clean(valve):
+    print("cleaning pump %d" % valve)
     hector.pump_start()
-    hector.valve_open(pump)
+    hector.valve_open(valve)
     time.sleep(10)
     times = 0
     while times < 5:
-        hector.valve_open(pump, 0)
+        hector.valve_close(valve)
         time.sleep(1)
-        hector.valve_open(pump)
+        hector.valve_open(valve)
         time.sleep(10)
         times += 1
-    hector.valve_open(pump, 0)
+    hector.valve_close(valve)
     time.sleep(10)
     hector.pump_stop()
     time.sleep(1)
+
+def do_clean_and_exit():
+    hector.clean_and_exit()
 
 def on_message(client, userdata, msg):
     log("on_message: " + str(msg.topic) + "," + str(msg.payload))
@@ -217,6 +220,14 @@ def on_message(client, userdata, msg):
         do_all_valve_open()
     elif topic == "all_valve_close":
         do_all_valve_close()
+    elif topic == "clean":
+        for i in range(hector.numValves):
+            do_clean(i)
+    elif topic == "dry":
+        for i in range(hector.numValves):
+            do_dry(i)
+    elif topic == "clean_and_exit":
+        do_clean_and_exit()
     elif topic == "valve_open":
         if not msg.payload.decode("utf-8").isnumeric():
             error("Wrong payload in valve open")

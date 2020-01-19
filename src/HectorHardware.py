@@ -10,6 +10,7 @@ from __future__ import division
 
 from time import sleep, time
 import sys
+import os
 from enum import  Enum
 
 from HectorAPI import HectorAPI
@@ -282,11 +283,21 @@ class HectorHardware(HectorAPI):
         else:
             self.pca.set_pwm(self.fingerChannel, 0, self.fingerPositions[0])
 
-    def cleanAndExit(self):
-        log("Cleaning...")
+    def clean_and_exit(self):
+        log("Cleaning up and shutdown...")
         GPIO.cleanup()
         log("Bye!")
-        sys.exit()
+        #sys.exit()
+        os.system('nohup sudo shutdown -h 0')
+    
+    def clean(self, index):
+        log("clean valve")
+        self.clean(index)
+
+    def dry(self, index):
+        log("dry valve")
+        self.dry(index)
+
 
     # Helper function to make setting a servo pulse width simpler.
     def set_servo_pulse(self, channel, pulse):

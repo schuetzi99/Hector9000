@@ -85,6 +85,12 @@ class HectorRemote(HectorAPI, LEDStripAPI):
     def valve_open(self, index, open=1):
         self.pub_with_subtopic("valve_open")
 
+    def all_valve_open(self):
+        self.pub_with_subtopic("all_valve_open")
+
+    def all_valve_close(self):
+        self.pub_with_subtopic("all_valve_close")
+
     def valve_close(self, index):
         self.pub_with_subtopic("valve_close")
 
@@ -113,7 +119,13 @@ class HectorRemote(HectorAPI, LEDStripAPI):
     def ping(self, num, retract=True, cback=None):
         self.pub_with_subtopic("ping", "3")
 
-    def cleanAndExit(self):
+    def clean(self):
+        self.pub_with_subtopic("clean")
+
+    def dry(self):
+        self.pub_with_subtopic("dry")
+
+    def clean_and_exit(self):
         self.pub_with_subtopic("clean_and_exit")
 
     def ledstripmessage(self,topic, color, type):

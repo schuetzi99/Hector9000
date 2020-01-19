@@ -14,7 +14,8 @@ class Verbose_Level(Enum):
     ERROR = 2
     SILENT = 3
 
-VERBOSE_LEVEL = Verbose_Level.DEGUB
+#VERBOSE_LEVEL = Verbose_Level.DEGUB
+VERBOSE_LEVEL = 1
 
 
 def debug(obj):
@@ -159,12 +160,13 @@ class HectorController:
                 self._do_dose_drink(msg)
                 pass
             elif currentTopic == self.TopicPrefix + "cleanMe":
-                # ToDo: Develop proper methode in Server
-                for i in range(12):
-                    self.hector.clean(1)
+                self.hector.clean()
                 pass
-                # clean(msg)
             elif currentTopic == self.TopicPrefix + "dryMe":
+                self.hector.dry()
+                pass
+            elif currentTopic == self.TopicPrefix + "cleanAndExit":
+                self.hector.clean_and_exit()
                 pass
             elif currentTopic == self.TopicPrefix + "openAllValves":
                 self.hector.all_valve_open()
