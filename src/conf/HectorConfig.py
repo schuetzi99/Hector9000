@@ -32,14 +32,14 @@ config = {
     },
     "a4988": {
         "ENABLE": 11,
-        "MS1": 13,
-        "MS2": 15,
-        "MS3": 19,
-        "RESET": 21,
+        "MS0": 13,
+        "MS1": 15,
+        "CONFIG": 19,
+        "VREF": 21,
         "SLEEP": 23,
         "STEP": 35,
         "DIR": 33,
-        "numSteps": 2400			# number of steps between IN and OUT positions
+        "numSteps": 2600			# number of steps between IN and OUT positions
     },
     "arm": {
         "SENSE": 16
