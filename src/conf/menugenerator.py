@@ -4,7 +4,7 @@ from drinks import drink_list, ingredients, available_ingredients, available_dri
 class PDF(FPDF):
     def header(self):
         # Logo
-        self.image('../../images/logo_400.png', 170, 8, 33)
+        self.image('../images/logo_400.png', 170, 8, 33)
         # Arial bold 15
         self.set_font('Arial', 'B', 15)
         # Move to the right
@@ -27,6 +27,10 @@ class PDF(FPDF):
 pdf = PDF()
 pdf.alias_nb_pages()
 pdf.add_page()
+pdf.set_auto_page_break(0)
+height_of_cell = 5
+page_height = 295
+bottom_margin = 15
 pdf.set_font('Times', '', 12)
 #for i in range(1, 41):
 #    pdf.cell(0, 10, 'Printing line number ' + str(i), 0, 1)
@@ -34,6 +38,9 @@ pdf.set_font('Times', '', 12)
 
 for drink in available_drinks:
     pdf.set_font('Times', '', 12)
+    space_left=page_height-(pdf.get_y()+bottom_margin) # space left on page
+    if (height_of_cell * 2 > space_left):
+        pdf.add_page() # page break
     pdf.cell(60, 5, drink["name"]  + ("" if alcoholic(drink) else " (alkoholfrei)"), 0,2)
     pdf.cell(10, 5, '         ', 0, 0)
     currentingredients=[]
