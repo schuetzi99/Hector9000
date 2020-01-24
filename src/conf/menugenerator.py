@@ -19,9 +19,9 @@ class PDF(FPDF):
         # Position at 1.5 cm from bottom
         self.set_y(-15)
         # Arial italic 8
-        self.set_font('Arial', 'I', 8)
+        self.set_font('Arial', 'I', 13)
         # Page number
-        self.cell(0, 10, 'Seite ' + str(self.page_no()) + '/{nb}', 0, 0, 'C')
+        self.multi_cell(0, 5, 'Seite ' + str(self.page_no()) + '/{nb}' + '\nwww.let-him-mix.de', 0, 'C')
 
 # Instantiation of inherited class
 pdf = PDF()
@@ -37,7 +37,7 @@ pdf.set_font('Times', '', 12)
 
 
 for drink in available_drinks:
-    pdf.set_font('Times', '', 12)
+    pdf.set_font('Times', '', 14)
     space_left=page_height-(pdf.get_y()+bottom_margin) # space left on page
     if (height_of_cell * 2 > space_left):
         pdf.add_page() # page break
@@ -46,7 +46,7 @@ for drink in available_drinks:
     currentingredients=[]
     for step in drink["recipe"]:
         currentingredients.append(ingredients[step[1]][0])
-    pdf.set_font('Times', '', 10)
+    pdf.set_font('Times', '', 13)
     pdf.cell(50, 5, ', '.join(currentingredients), 0, 0)
     pdf.cell(0, 7, '', 0, 1)
 
