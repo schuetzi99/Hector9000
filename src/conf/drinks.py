@@ -18,6 +18,13 @@ drink_list = [
             ("ingr", "wodka", 20),
         ]
     }, {
+        "name": "Amaretto Sour",
+        "recipe": [
+            ("ingr", "amaretto", 30),
+            ("ingr", "zitronens", 30),
+            ("ingr", "orangens", 30),
+        ]
+    }, {
         "name": "Bacardi Sunrise",
         "recipe": [
             ("ingr", "bacardi", 40),
@@ -157,6 +164,14 @@ drink_list = [
             ("ingr", "orangens", 60),
         ]
     }, {
+        "name": "Drachenblut",
+        "recipe": [
+            ("ingr", "kirschs", 40),
+            ("ingr", "ananass", 40),
+            ("ingr", "gren", 10),
+            ("ingr", "zitronens", 10),
+        ]
+    }, {
         "name": "Exotic",
         "recipe": [
             ("ingr", "orangens", 90),
@@ -272,6 +287,14 @@ drink_list = [
             ("ingr", "gren", 20),
         ]
     }, {
+        "name": "Lucky Driver",
+        "recipe": [
+            ("ingr", "zitronens", 10),
+            ("ingr", "orangens", 40),
+            ("ingr", "maracujas", 20),
+            ("ingr", "gren", 10),
+        ]
+    }, {
         "name": "Magnolia Blossom",
         "recipe": [
             ("ingr", "gin", 30),
@@ -376,10 +399,27 @@ drink_list = [
             ("ingr", "orangens", 150),
         ]
     }, {
+        "name": "Sex on the Beach",
+        "recipe": [
+            ("ingr", "wodka", 20),
+            ("ingr", "pfirsichl", 40),
+            ("ingr", "cranberrys", 80),
+            ("ingr", "pfirsichs", 50),
+        ]
+    }, {
         "name": "Soft Poison",
         "recipe": [
             ("ingr", "curacao", 20),
             ("ingr", "orangens", 160),
+        ]
+    }, {
+        "name": "Spain",
+        "recipe": [
+            ("ingr", "43", 30),
+            ("ingr", "wodka", 20),
+            ("ingr", "sahne", 20),
+            ("ingr", "gren", 20),
+            ("ingr", "maracujas", 70),
         ]
     }, {
         "name": "Sunset",
@@ -387,6 +427,21 @@ drink_list = [
             ("ingr", "cola", 70),
             ("ingr", "orangens", 100),
             ("ingr", "gren", 30),
+        ]
+    }, {
+        "name": "Tequila Sunrise",
+        "recipe": [
+            ("ingr", "tequila", 20),
+            ("ingr", "gren", 10),
+            ("ingr", "zitronens", 10),
+            ("ingr", "orangens", 50),
+        ]
+    }, {
+        "name": "Virgin Cherry Colada",
+        "recipe": [
+            ("ingr", "kokos", 10),
+            ("ingr", "sahne", 10),
+            ("ingr", "kirschs", 100),
         ]
     }, {
         "name": "Virgin Sunrise",
@@ -447,18 +502,22 @@ ingredients = {
     "ananass": ("Ananassaft", False),
     "cola": ("Cola", False),
     "cranb": ("Cranberry Sirup", False),
+    "cranbs": ("Cranberry Saft", False),
     "gga": ("Ginger Ale", False),
     "gren": ("Grenadine", False),
+    "kirschs": ("Kirschsaft", False),
     "kokos": ("Kokossirup", False),
     "mate": ("Mate", False),
     "mangos": ("Mangosaft", False),
     "maracujas": ("Maracujasaft", False),
     "orangens": ("Orangensaft", False),
+    "pfirsichs": ("Pfirsichsaft", False),
     "sahne": ("Sahne", False),
     "tonic": ("Tonic Water", False),
     "zitronens": ("Zitronensaft", False),
     # mit Alkohol
     "43": ("43", True),
+    "amaretto": ("Amaretto", True),
     "gin": ("Gin", True),
     "bacardi": ("Bacardi", True),
     "curacao": ("Blue Curacao", True),
