@@ -160,8 +160,11 @@ def do_ping(num, retract):
 
 def do_dry(pump):
     log("drying pump %d" % pump)
+    hector.pump_start()
     hector.valve_open(pump)
     time.sleep(20)
+    hector.pump_stop()
+    time.sleep(2)
     hector.valve_open(pump, 0)
 
 
@@ -178,7 +181,7 @@ def do_clean(valve):
         time.sleep(10)
         times += 1
     hector.valve_close(valve)
-    time.sleep(10)
+    time.sleep(2)
     hector.pump_stop()
     time.sleep(1)
 
