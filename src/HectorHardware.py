@@ -11,13 +11,13 @@ from __future__ import division
 from time import sleep, time
 import sys
 
-from .HectorAPI import HectorAPI
-from .conf.HectorConfig import config
+from HectorAPI import HectorAPI
+from conf.HectorConfig import config
 
 # hardware modules
 import Adafruit_PCA9685
 import RPi.GPIO as GPIO
-from .hx711 import HX711
+from hx711 import HX711
 
 
 ## settings
@@ -36,7 +36,7 @@ VERBOSE_LEVEL = 0
 
 def log(message):
     if VERBOSE_LEVEL == 0:
-        log("" + str(message))
+        print("" + str(message))
 
 
 def error(message):
@@ -59,8 +59,8 @@ class HectorHardware(HectorAPI):
         GPIO.setmode(GPIO.BOARD)
 
         # setup scale (HX711)
-        hx1 = cfg["hx711"]["CLK"]
-        hx2 = cfg["hx711"]["DAT"]
+        hx1 = cfg["hx711"]["DAT"]
+        hx2 = cfg["hx711"]["CLK"]
         hxref = cfg["hx711"]["ref"]
         self.hx = HX711(hx1, hx2)
         self.hx.set_reading_format("LSB", "MSB")
@@ -81,24 +81,35 @@ class HectorHardware(HectorAPI):
         self.pca = Adafruit_PCA9685.PCA9685()
         self.pca.set_pwm_freq(pcafreq)
 
+
         # setup arm stepper (A4988)
         self.armEnable = cfg["a4988"]["ENABLE"]
-        self.armReset = cfg["a4988"]["RESET"]
+        self.armVRef = cfg["a4988"]["VREF"]
         self.armSleep = cfg["a4988"]["SLEEP"]
         self.armStep = cfg["a4988"]["STEP"]
         self.armDir = cfg["a4988"]["DIR"]
         self.armNumSteps = cfg["a4988"]["numSteps"]
         self.arm = cfg["arm"]["SENSE"]
+        self.armMs0 = cfg["a4988"]["MS0"]
+        self.armMs1 = cfg["a4988"]["MS1"]
+        self.armConfig = cfg["a4988"]["CONFIG"]
         GPIO.setup(self.armEnable, GPIO.OUT)
         GPIO.output(self.armEnable, True)
-        GPIO.setup(self.armReset, GPIO.OUT)
-        GPIO.output(self.armReset, True)
+        GPIO.setup(self.armVRef, GPIO.IN)
+        #GPIO.output(self.armVRef, True)
         GPIO.setup(self.armSleep, GPIO.OUT)
         GPIO.output(self.armSleep, True)
         GPIO.setup(self.armStep, GPIO.OUT)
+        GPIO.setup(self.armMs0, GPIO.OUT)
+        GPIO.output(self.armMs0, False)
+        GPIO.setup(self.armMs1, GPIO.OUT)
+        GPIO.output(self.armMs1, True)
+        GPIO.setup(self.armConfig, GPIO.IN)
+        #GPIO.output(self.armConfig, True)
         GPIO.setup(self.armDir, GPIO.OUT)
         GPIO.setup(self.arm, GPIO.IN)
         GPIO.setup(self.lightPin, GPIO.OUT)
+
 
         # setup air pump (GPIO)
         self.pump = cfg["pump"]["MOTOR"]
@@ -115,11 +126,12 @@ class HectorHardware(HectorAPI):
         log("turn off light")
         GPIO.output(self.lightPin, False)
 
+
     def arm_out(self, cback=None):
         armMaxSteps = int(self.armNumSteps * 1.1)
         GPIO.output(self.armEnable, False)
         log("move arm out")
-        GPIO.output(self.armDir, True)
+        GPIO.output(self.armDir, False)
         for i in range(armMaxSteps):
             if self.arm_isInOutPos():
                 GPIO.output(self.armEnable, True)
@@ -127,9 +139,9 @@ class HectorHardware(HectorAPI):
                 if cback: cback("arm_out", 100)
                 return
             GPIO.output(self.armStep, False)
-            sleep(.001)
+            sleep(.00005)
             GPIO.output(self.armStep, True)
-            sleep(.001)
+            sleep(.00005)
             if cback: cback("arm_out", i * 100 / self.armNumSteps)
         GPIO.output(self.armEnable, True)
         log("arm is in OUT position (with timeout)")
@@ -138,15 +150,20 @@ class HectorHardware(HectorAPI):
         self.arm_out(cback)
         GPIO.output(self.armEnable, False)
         log("move arm in")
-        GPIO.output(self.armDir, False)
+        GPIO.output(self.armDir, True)
         for i in range(self.armNumSteps, 0, -1):
             GPIO.output(self.armStep, False)
-            sleep(.001)
+            sleep(.00005)
             GPIO.output(self.armStep, True)
-            sleep(.001)
+            sleep(.00005)
             if cback and (i % 10 == 0): cback("arm_in", i * 100 / self.armNumSteps)
         GPIO.output(self.armEnable, True)
         log("arm is in IN position")
+
+
+
+
+
 
     def arm_isInOutPos(self):
         pos = GPIO.input(self.arm)

@@ -56,47 +56,56 @@ class Database:
             self.con.commit()
 
     def _import_Ingredients(self):
-        if not self._check_Table_is_Filled("Ingredients"):
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('gin', 'Gin', 1);""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('rum', 'Rum', 1);""")
-            self.cur.execute(
-                """INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('vodka', 'Vodka', 1);""")
-            self.cur.execute(
-                """INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('tequila', 'Tequila', 1);""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('tonic', 'Tonic Water');""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('coke', 'Cola');""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('oj', 'Orange Juice');""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('gren', 'Grenadine');""")
-            self.cur.execute(
-                """INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('mmix', 'Margarita Mix', 1);""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('mate', 'Mate');""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('pine', 'Pineapple Juice');""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('raspberry', 'Raspberry');""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('gga', 'Ginger Ale');""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('cocos', 'Cocos');""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('mango', 'Mango Juice');""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('lms', 'Limettensaft');""")
-            self.cur.execute(
-                """INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('coin', 'Cointreau', 1);""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('lime', 'Lime');""")
-            self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('gibe', 'Ginger Beer');""")
-            self.con.commit()
+      if not self._check_Table_is_Filled("Ingredients"):
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('43', '43', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('amaretto', 'Amaretto', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('gin', 'Gin', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('bacardi', 'Bacardi', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('curacao', 'Curacao', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('cachaca', 'Cachaca Pitu', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('malibu', 'Malibu', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('orangenl', 'Orangenlikör', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('rum', 'Rum', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('tequila', 'Tequila', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('wodka', 'Wodka', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('whyski', 'Whyski', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('ananass', 'Ananassaft');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('cola', 'Cola');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('cranb', 'Cranberry Sirup');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('cranbs', 'Cranberry Saft');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('gga', 'Ginger Ale');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('gren', 'Grenadine');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('kirschs', 'Kirschsaft');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('kokos', 'Kokossirup');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('mate', 'Mate');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('mangos', 'Mangosaft');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('maracujas', 'Maracujasaft');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('orangens', 'Orangensaft');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('pfirsichs', 'Pfirsichsaft');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('sahne', 'Sahne');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('tonic', 'Tonic Water');""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('zitronens', 'Zitronensaft');""")
+        self.con.commit()
 
     def _import_servos(self):
-        if not self._check_Table_is_Filled('servos'):
-            self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (1, 'gren');""")
-            self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (2, 'rum');""")
-            self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (3, 'vodka');""")
-            self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (4, 'gin');""")
-            self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (5, 'tequila');""")
-            self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (6, 'gibe');""")
-            self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (7, 'lime');""")
-            self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (8, 'tonic');""")
-            self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (9, 'mate');""")
-            self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (10, 'gga');""")
-            self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (11, 'pine');""")
-            self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (12, 'oj');""")
-            self.con.commit()
+      if not self._check_Table_is_Filled('servos'):
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (1, 'gren');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (2, 'bacardi');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (3, 'wodka');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (4, 'orangens');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (5, 'zitronens');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (6, 'maracujas');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (7, 'kirschs');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (8, 'orangenl');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (9, 'sahne');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (10, 'curacao');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (11, 'ananass');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (12, 'kokos');""")
+        self.con.commit()
+
+
+
+
 
     def _check_Table_is_Filled(self, table):
         self.cur.execute("SELECT * FROM " + table)

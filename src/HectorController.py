@@ -1,8 +1,8 @@
-from .HectorRemote import HectorRemote as Hector
+from HectorRemote import HectorRemote as Hector
 #from .HectorSimulator import HectorSimulator as Hector
 import json
-import Hector.conf.drinks as drinks
-import Hector.conf.database as db
+import conf.drinks as drinks
+import conf.database as db
 import webcolors
 import paho.mqtt.client as mqtt
 import time
