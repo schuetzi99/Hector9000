@@ -1,13 +1,14 @@
 from fpdf import FPDF
-from drinks import drink_list, ingredients, available_ingredients, available_drinks, alcoholic, doable
+from conf.drinks import drink_list, ingredients, available_ingredients, available_drinks, alcoholic, doable
 
-FPDF.add_font('Data70', '', 'Data70.ttf', uni=True)
 class PDF(FPDF):
     def header(self):
         # Logo
+        #self.add_font('sysfont', '', r"/usr/share/fonts/truetype/Data70.ttf", uni=True)
         self.image('../images/logo_400.png', 170, 8, 33)
         # Arial bold 15
-        self.set_font('Data70', 'B', 15)
+        #self.set_font('Data 70 LET', '', 15)
+        self.set_font('Arial', 'B', 15)
         # Move to the right
         self.cell(80)
         # Title

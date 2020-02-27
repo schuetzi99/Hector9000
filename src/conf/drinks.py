@@ -18,6 +18,14 @@ drink_list = [
             ("ingr", "gren", 20),
         ]
     }, {
+        "name": "Alice Babylove",
+        "recipe": [
+            ("ingr", "sahne", 40),
+            ("ingr", "ananass", 60),
+            ("ingr", "orangens", 60),
+            ("ingr", "gren", 20),
+        ]
+    }, {
         "name": "Alice Deluxe",
         "recipe": [
             ("ingr", "sahne", 20),
@@ -46,6 +54,13 @@ drink_list = [
         "recipe": [
             ("ingr", "bacardi", 40),
             ("ingr", "cola", 200),
+        ]
+    }, {
+        "name": "Ballerina",
+        "recipe": [
+            ("ingr", "ananass", 40),
+            ("ingr", "orangens", 40),
+            ("ingr", "zitronens", 10),
         ]
     }, {
         "name": "Balalaika",
@@ -160,11 +175,28 @@ drink_list = [
             ("ingr", "orangens", 100),
         ]
     }, {
+        "name": "Cinderella 2",
+        "recipe": [
+            ("ingr", "ananass", 60),
+            ("ingr", "orangens", 60),
+            ("ingr", "sahne", 25),
+            ("ingr", "gren", 20),
+            ("ingr", "kokos", 20),
+        ]
+    }, {
         "name": "Cococabana",
         "recipe": [
             ("ingr", "malibu", 30),
             ("ingr", "bacardi", 30),
             ("ingr", "ananass", 80),
+        ]
+    }, {
+        "name": "Coconut Dream",
+        "recipe": [
+            ("ingr", "sahne", 10),
+            ("ingr", "kokos", 15),
+            ("ingr", "ananass", 75),
+            ("ingr", "gren", 5),
         ]
     }, {
         "name": "Coconut Kiss",
@@ -177,10 +209,26 @@ drink_list = [
             ("ingr", "gren", 10),
         ]
     }, {
+        "name": "Coconut Kiss 2",
+        "recipe": [
+            ("ingr", "sahne", 30),
+            ("ingr", "kokos", 20),
+            ("ingr", "ananass", 40),
+            ("ingr", "orangens", 40),
+            ("ingr", "bacardi", 20),
+        ]
+    }, {
         "name": "Cola 43",
         "recipe": [
             ("ingr", "43", 20),
             ("ingr", "cola", 60),
+        ]
+    }, {
+        "name": "Cuba Libre",
+        "recipe": [
+            ("ingr", "bacardi", 40),
+            ("ingr", "zitronens", 5),
+            ("ingr", "cola", 100),
         ]
     }, {
         "name": "Don Juan",
@@ -265,6 +313,19 @@ drink_list = [
             ("ingr", "tonic", 100),
         ]
     }, {
+        "name": "Grand Royale",
+        "recipe": [
+            ("ingr", "orangenl", 30),
+            ("ingr", "ananass", 70),
+        ]
+    }, {
+        "name": "Green Devil",
+        "recipe": [
+            ("ingr", "bacardi", 20),
+            ("ingr", "curacao", 10),
+            ("ingr", "orangens", 20),
+        ]
+    }, {
         "name": "Green Mile",
         "recipe": [
             ("ingr", "wodka", 20),
@@ -327,6 +388,14 @@ drink_list = [
             ("ingr", "ananass", 20),
             ("ingr", "maracujas", 20),
             ("ingr", "gren", 20),
+        ]
+    }, {
+        "name": "Lovers Best",
+        "recipe": [
+            ("ingr", "zitronens", 5),
+            ("ingr", "orangens", 60),
+            ("ingr", "ananass", 60),
+            ("ingr", "maracujas", 60),
         ]
     }, {
         "name": "Lucky Driver",
@@ -412,6 +481,13 @@ drink_list = [
             ("ingr", "ananass", 50),
         ]
     }, {
+        "name": "Presidente",
+        "recipe": [
+            ("ingr", "bacardi", 40),
+            ("ingr", "orangenl", 20),
+            ("ingr", "gren", 20),
+        ]
+    }, {
         "name": "Pussycat",
         "recipe": [
             ("ingr", "orangens", 50),
@@ -429,6 +505,14 @@ drink_list = [
             ("ingr", "gren", 10),
         ]
     }, {
+        "name": "Red One",
+        "recipe": [
+            ("ingr", "ananass", 50),
+            ("ingr", "orangens", 50),
+            ("ingr", "zitronens", 5),
+            ("ingr", "gren", 10),
+        ]
+    }, {
         "name": "Screw Driver",
         "recipe": [
             ("ingr", "wodka", 50),
@@ -439,8 +523,17 @@ drink_list = [
         "recipe": [
             ("ingr", "wodka", 20),
             ("ingr", "pfirsichl", 40),
-            ("ingr", "cranberrys", 80),
+            ("ingr", "cranbs", 80),
             ("ingr", "pfirsichs", 50),
+        ]
+    }, {
+        "name": "Sixteen",
+        "recipe": [
+            ("ingr", "maracujas", 15),
+            ("ingr", "orangens", 60),
+            ("ingr", "ananass", 30),
+            ("ingr", "zitronens", 5),
+            ("ingr", "gren", 15),
         ]
     }, {
         "name": "Soft Poison",
@@ -616,4 +709,5 @@ def alcoholic(drink):
 
 
 available_drinks = [drink for drink in drink_list if doable(drink, available_ingredients)]
+all_drinks = [drink for drink in drink_list]
 
