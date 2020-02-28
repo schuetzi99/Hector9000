@@ -18,14 +18,6 @@ drink_list = [
             ("ingr", "gren", 20),
         ]
     }, {
-        "name": "Alice Babylove",
-        "recipe": [
-            ("ingr", "sahne", 40),
-            ("ingr", "ananass", 60),
-            ("ingr", "orangens", 60),
-            ("ingr", "gren", 20),
-        ]
-    }, {
         "name": "Alice Deluxe",
         "recipe": [
             ("ingr", "sahne", 20),
@@ -68,13 +60,6 @@ drink_list = [
             ("ingr", "wodka", 40),
             ("ingr", "zitronens", 10),
             ("ingr", "orangenl", 20),
-        ]
-    }, {
-        "name": "Ballerina",
-        "recipe": [
-            ("ingr", "ananass", 40),
-            ("ingr", "zitronens", 15),
-            ("ingr", "orangens", 40),
         ]
     }, {
         "name": "Baltic",
@@ -276,6 +261,18 @@ drink_list = [
             ("ingr", "gren", 15),
         ]
     }, {
+        "name": "Gin Tonic",
+        "recipe": [
+            ("ingr", "gin", 30),
+            ("ingr", "tonic", 80),
+        ]
+    }, {
+        "name": "Gin Juice",
+        "recipe": [
+            ("ingr", "gin", 30),
+            ("ingr", "orangens", 80),
+        ]
+    }, {
         "name": "Gloom Chaser",
         "recipe": [
             ("ingr", "orangenl", 20),
@@ -338,6 +335,13 @@ drink_list = [
         "recipe": [
             ("ingr", "curacao", 40),
             ("ingr", "orangens", 100),
+        ]
+    }, {
+        "name": "Hula Hula",
+        "recipe": [
+            ("ingr", "gin", 40),
+            ("ingr", "orangenl", 10),
+            ("ingr", "orangens", 20),
         ]
     }, {
         "name": "Indianapolis",
@@ -637,7 +641,19 @@ drink_list = [
         "name": "Extra Schuss Wodka",
         "recipe": [("ingr", "wodka", 20)]
     }, {
-        "name": "Extra Schuss O-Saft",
+        "name": "Extra Schuss Gin",
+        "recipe": [("ingr", "gin", 20)]
+    }, {
+        "name": "Extra Schuss Maracujas.",
+        "recipe": [("ingr", "maracujas", 20)]
+    }, {
+        "name": "Extra Schuss Tonic",
+        "recipe": [("ingr", "tonic", 20)]
+    }, {
+        "name": "Extra Schuss Ananass.",
+        "recipe": [("ingr", "ananass", 20)]
+    }, {
+        "name": "Extra Schuss Orangens.",
         "recipe": [("ingr", "orangens", 50)]
     }
 ]

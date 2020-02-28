@@ -90,18 +90,18 @@ class Database:
 
     def _import_servos(self):
       if not self._check_Table_is_Filled('servos'):
-        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (1, 'gren');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (1, 'curacao');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (2, 'bacardi');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (3, 'wodka');""")
-        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (4, 'orangens');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (4, 'gin');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (5, 'zitronens');""")
-        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (6, 'maracujas');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (6, 'sahne');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (7, 'cola');""")
-        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (8, 'orangenl');""")
-        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (9, 'sahne');""")
-        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (10, 'curacao');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (8, 'gren');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (9, 'tonic');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (10, 'maracujas');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (11, 'ananass');""")
-        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (12, 'kokos');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (12, 'orangens');""")
         self.con.commit()
 
 

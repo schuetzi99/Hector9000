@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 import sys, time
-from src import config
-from Hector9000.HectorHardware import HectorHardware
+from conf.HectorConfig import config
+from HectorHardware import HectorHardware
 
 hardware = True
 
@@ -15,10 +15,10 @@ print("")
 if hardware:
     h.light_on()
     time.sleep(1)
-    h.arm_out()
+    #h.arm_out()
 
 if True:
-    vlist = sys.argv[1:]
+    vlist = range(12)
     valves = []
     print("Die folgenden Kanäle werden jetzt gereinigt:")
     for v in vlist:
@@ -29,12 +29,12 @@ if True:
         valves.append(i)
 if hardware:
     h.pump_start()
-    for i in range(10):
+    for i in range(20):
         print("STEP: " + str(i))
         for vnum in valves:
             print("Ventil %d wird geöffnet, Ende mit <Return>" % (vnum,))
             h.valve_open(vnum)
-            time.sleep(10)
+            time.sleep(2)
             h.valve_close(vnum)
     h.pump_stop()
 
