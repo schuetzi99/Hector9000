@@ -34,6 +34,15 @@ drink_list = [
             ("ingr", "orangens", 30),
         ]
     }, {
+        "name": "Amaretto Sunrise",
+        "recipe": [
+            ("ingr", "bacardi", 15),
+            ("ingr", "amaretto", 15),
+            ("ingr", "ananass", 40),
+            ("ingr", "orangens", 40),
+            ("ingr", "gren", 10),
+        ]
+    }, {
         "name": "Bacardi Sunrise",
         "recipe": [
             ("ingr", "bacardi", 40),
@@ -160,6 +169,15 @@ drink_list = [
             ("ingr", "orangens", 100),
         ]
     }, {
+        "name": "Carribean Romance",
+        "recipe": [
+            ("ingr", "amaretto", 10),
+            ("ingr", "bacardi", 30),
+            ("ingr", "ananass", 30),
+            ("ingr", "orangens", 30),
+            ("ingr", "gren", 10),
+        ]
+    }, {
         "name": "Cinderella 2",
         "recipe": [
             ("ingr", "ananass", 60),
@@ -253,12 +271,27 @@ drink_list = [
             ("ingr", "maracujas", 60),
         ]
     }, {
+        "name": "Fiesta",
+        "recipe": [
+            ("ingr", "wodka", 20),
+            ("ingr", "pfirsichl", 15),
+            ("ingr", "curacao", 8),
+            ("ingr", "maracujas", 65),
+        ]
+    }, {
         "name": "Formula One",
         "recipe": [
             ("ingr", "malibu", 20),
             ("ingr", "bacardi", 40),
             ("ingr", "ananass", 80),
             ("ingr", "gren", 15),
+        ]
+    }, {
+        "name": "Fuzzy Navel",
+        "recipe": [
+            ("ingr", "orangens", 75),
+            ("ingr", "pfirsichl", 15),
+            ("ingr", "wodka", 15),
         ]
     }, {
         "name": "Gin Tonic",
@@ -280,6 +313,19 @@ drink_list = [
             ("ingr", "zitronens", 5),
         ]
     }, {
+        "name": "God Child",
+        "recipe": [
+            ("ingr", "amaretto", 30),
+            ("ingr", "wodka", 30),
+            ("ingr", "sahne", 30),
+        ]
+    }, {
+        "name": "God Mother",
+        "recipe": [
+            ("ingr", "amaretto", 30),
+            ("ingr", "wodka", 40),
+        ]
+    }, {
         "name": "Golden Smile",
         "recipe": [
             ("ingr", "zitronens", 5),
@@ -296,6 +342,13 @@ drink_list = [
             ("ingr", "zitronens", 5),
             ("ingr", "orangens", 10),
             ("ingr", "ananass", 10),
+        ]
+    }, {
+        "name": "Goody Two Shoes",
+        "recipe": [
+            ("ingr", "amaretto", 30),
+            ("ingr", "zitronens", 15),
+            ("ingr", "orangens", 30),
         ]
     }, {
         "name": "Grand Marnier",
@@ -447,6 +500,22 @@ drink_list = [
             ("ingr", "orangens", 60),
         ]
     }, {
+        "name": "Mandero",
+        "recipe": [
+            ("ingr", "sahne", 10),
+            ("ingr", "orangens", 30),
+            ("ingr", "amaretto", 20),
+            ("ingr", "orangens", 30),
+        ]
+    }, {
+        "name": "Männertraum",
+        "recipe": [
+            ("ingr", "orangenl", 10),
+            ("ingr", "orangens", 60),
+            ("ingr", "amaretto", 10),
+            ("ingr", "wodka", 5),
+        ]
+    }, {
         "name": "Maracolada",
         "recipe": [
             ("ingr", "kokos", 20),
@@ -459,6 +528,14 @@ drink_list = [
             ("ingr", "bacardi", 40),
             ("ingr", "zitronens", 10),
             ("ingr", "orangenl", 20),
+        ]
+    }, {
+        "name": "Peach Sling",
+        "recipe": [
+            ("ingr", "pfirsichl", 30),
+            ("ingr", "wodka", 15),
+            ("ingr", "orangens", 40),
+            ("ingr", "gren", 8),
         ]
     }, {
         "name": "Pina Colada",
@@ -517,18 +594,27 @@ drink_list = [
             ("ingr", "gren", 10),
         ]
     }, {
+        "name": "Scorpion Lady",
+        "recipe": [
+            ("ingr", "bacardi", 40),
+            ("ingr", "amaretto", 15),
+            ("ingr", "zitronens", 15),
+            ("ingr", "orangens", 40),
+        ]
+    }, {
         "name": "Screw Driver",
         "recipe": [
             ("ingr", "wodka", 50),
             ("ingr", "orangens", 150),
         ]
     }, {
-        "name": "Sex on the Beach",
+        "name": "Sex on the Beach 17",
         "recipe": [
             ("ingr", "wodka", 20),
-            ("ingr", "pfirsichl", 40),
-            ("ingr", "cranbs", 80),
-            ("ingr", "pfirsichs", 50),
+            ("ingr", "pfirsichl", 10),
+            ("ingr", "gren", 10),
+            ("ingr", "orangens", 30),
+            ("ingr", "maracujas", 15),
         ]
     }, {
         "name": "Sixteen",
@@ -546,6 +632,15 @@ drink_list = [
             ("ingr", "orangens", 160),
         ]
     }, {
+        "name": "Southern Lady",
+        "recipe": [
+            ("ingr", "amaretto", 10),
+            ("ingr", "wodka", 15),
+            ("ingr", "gren", 5),
+            ("ingr", "sahne", 10),
+            ("ingr", "ananass", 60),
+        ]
+    }, {
         "name": "Spain",
         "recipe": [
             ("ingr", "43", 30),
@@ -560,6 +655,14 @@ drink_list = [
             ("ingr", "cola", 70),
             ("ingr", "orangens", 100),
             ("ingr", "gren", 30),
+        ]
+    }, {
+        "name": "Sweet Russian",
+        "recipe": [
+            ("ingr", "wodka", 30),
+            ("ingr", "pfirsichl", 30),
+            ("ingr", "zitronens", 10),
+            ("ingr", "maracujas", 60),
         ]
     }, {
         "name": "Swimming Pool",
@@ -627,6 +730,14 @@ drink_list = [
         "recipe": [
             ("ingr", "wodka", 20),
             ("ingr", "tonic", 100),
+        ]
+    }, {
+        "name": "Yellow Almond",
+        "recipe": [
+            ("ingr", "amaretto", 20),
+            ("ingr", "wodka", 10),
+            ("ingr", "orangens", 30),
+            ("ingr", "ananass", 30),
         ]
     }, {
         "name": "Extra Schuss Bacardi",
