@@ -505,7 +505,7 @@ drink_list = [
             ("ingr", "sahne", 10),
             ("ingr", "orangens", 30),
             ("ingr", "amaretto", 20),
-            ("ingr", "orangens", 30),
+            ("ingr", "ananass", 30),
         ]
     }, {
         "name": "Männertraum",
