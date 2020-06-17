@@ -1,6 +1,15 @@
 # drinks_more_recipes.py
 drink_list = [
     {
+        "name": "43 Sunset",
+        "recipe": [
+            ("ingr", "maracujas", 40),
+            ("ingr", "ananass", 20),
+            ("ingr", "43", 15),
+            ("ingr", "malibu", 10),
+            ("ingr", "wodka", 10),
+        ]
+    }, {
         "name": "Alice",
         "recipe": [
             ("ingr", "sahne", 20),
@@ -158,6 +167,22 @@ drink_list = [
             ("ingr", "ananass", 80),
         ]
     }, {
+        "name": "Coconut Kiss",
+        "recipe": [
+            ("ingr", "sahne", 30),
+            ("ingr", "kokos", 20),
+            ("ingr", "kirschs", 40),
+            ("ingr", "ananass", 60),
+            ("ingr", "maracujas", 20),
+            ("ingr", "gren", 10),
+        ]
+    }, {
+        "name": "Cola 43",
+        "recipe": [
+            ("ingr", "43", 20),
+            ("ingr", "cola", 60),
+        ]
+    }, {
         "name": "Don Juan",
         "recipe": [
             ("ingr", "43", 20),
@@ -210,6 +235,15 @@ drink_list = [
             ("ingr", "zitronens", 5),
         ]
     }, {
+        "name": "Golden Smile",
+        "recipe": [
+            ("ingr", "zitronens", 5),
+            ("ingr", "orangens", 60),
+            ("ingr", "wodka", 20),
+            ("ingr", "ananass", 60),
+            ("ingr", "43", 40),
+        ]
+    }, {
         "name": "Golden Sunrise",
         "recipe": [
             ("ingr", "bacardi", 60),
@@ -229,6 +263,14 @@ drink_list = [
         "recipe": [
             ("ingr", "orangenl", 15),
             ("ingr", "tonic", 100),
+        ]
+    }, {
+        "name": "Green Mile",
+        "recipe": [
+            ("ingr", "wodka", 20),
+            ("ingr", "curacao", 20),
+            ("ingr", "zitronens", 5),
+            ("ingr", "ananass", 100),
         ]
     }, {
         "name": "Gruene Witwe",
@@ -346,12 +388,6 @@ drink_list = [
             ("ingr", "orangenl", 20),
         ]
     }, {
-        "name": "Cola 43",
-        "recipe": [
-            ("ingr", "43", 20),
-            ("ingr", "cola", 60),
-        ]
-    }, {
         "name": "Pina Colada",
         "recipe": [
             ("ingr", "bacardi", 25),
@@ -429,12 +465,30 @@ drink_list = [
             ("ingr", "gren", 30),
         ]
     }, {
+        "name": "Swimming Pool",
+        "recipe": [
+            ("ingr", "bacardi", 20),
+            ("ingr", "curacao", 20),
+            ("ingr", "sahne", 20),
+            ("ingr", "kokos", 30),
+            ("ingr", "wodka", 40),
+            ("ingr", "ananass", 80),
+        ]
+    }, {
         "name": "Tequila Sunrise",
         "recipe": [
             ("ingr", "tequila", 20),
             ("ingr", "gren", 10),
             ("ingr", "zitronens", 10),
             ("ingr", "orangens", 50),
+        ]
+    }, {
+        "name": "Traumschiff",
+        "recipe": [
+            ("ingr", "43", 40),
+            ("ingr", "malibu", 10),
+            ("ingr", "curacao", 20),
+            ("ingr", "ananass", 100),
         ]
     }, {
         "name": "Virgin Cherry Colada",
