@@ -166,6 +166,12 @@ drink_list = [
             ("ingr", "sekt", 60),
         ]
     }, {
+        "name": "Blue Virgin Angel",
+        "recipe": [
+            ("ingr", "curacaos", 20),
+            ("ingr", "sekt", 60),
+        ]
+    }, {
         "name": "Blue Hawaii",
         "recipe": [
             ("ingr", "bacardi", 15),
@@ -328,6 +334,13 @@ drink_list = [
             ("ingr", "curacao", 30),
         ]
     }, {
+        "name": "Exotic Blue Virgin",
+        "recipe": [
+            ("ingr", "ananass", 60),
+            ("ingr", "sahne", 15),
+            ("ingr", "curacaos", 30),
+        ]
+    }, {
         "name": "Festini",
         "recipe": [
             ("ingr", "wodka", 20),
@@ -461,6 +474,12 @@ drink_list = [
             ("ingr", "curacao", 20),
             ("ingr", "zitronens", 5),
             ("ingr", "ananass", 100),
+        ]
+    }, {
+        "name": "Gruene Jungfrau",
+        "recipe": [
+            ("ingr", "curacaos", 30),
+            ("ingr", "orangens", 60),
         ]
     }, {
         "name": "Gruene Wiese",
@@ -685,6 +704,14 @@ drink_list = [
             ("ingr", "gren", 20),
         ]
     }, {
+        "name": "Pussycat Virgin",
+        "recipe": [
+            ("ingr", "orangens", 50),
+            ("ingr", "sahne", 20),
+            ("ingr", "ananass", 50),
+            ("ingr", "curacaos", 20),
+        ]
+    }, {
         "name": "Pussycat",
         "recipe": [
             ("ingr", "orangens", 50),
@@ -760,6 +787,12 @@ drink_list = [
         "name": "Soft Poison",
         "recipe": [
             ("ingr", "curacao", 20),
+            ("ingr", "orangens", 160),
+        ]
+    }, {
+        "name": "Soft Poison Virgin",
+        "recipe": [
+            ("ingr", "curacaos", 20),
             ("ingr", "orangens", 160),
         ]
     }, {
