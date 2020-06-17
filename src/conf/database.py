@@ -61,7 +61,7 @@ class Database:
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (4, 'orangens');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (5, 'zitronens');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (6, 'maracujas');""")
-        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (7, 'tonic');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (7, 'kirschs');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (8, 'orangenl');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (9, 'sahne');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (10, 'curacao');""")

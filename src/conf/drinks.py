@@ -542,7 +542,7 @@ actions = {
 
 # To DB -> replace
 #available_ingredients = ["gren", "rum", "vodka", "gin", "tequila", "gibe", "lime", "tonic", "mate", "gga", "pine", "oj"]
-available_ingredients = ["gren", "bacardi", "wodka", "orangens", "zitronens", "maracujas", "tonic", "orangenl", "sahne", "curacao", "ananass", "kokos"]
+available_ingredients = ["gren", "bacardi", "wodka", "orangens", "zitronens", "maracujas", "kirschs", "orangenl", "sahne", "curacao", "ananass", "kokos"]
 
 
 def doable(drink, available):

@@ -6,7 +6,7 @@ class LEDStripConnector(LEDStripAPI):
 
     def __init__(self):
         self.PORT = board.D18
-        self.NUM = 109
+        self.NUM = 103
         self.NUMBASE = 5
         self.pixels = neopixel.NeoPixel(self.PORT, self.NUM)
         self.cols = [
