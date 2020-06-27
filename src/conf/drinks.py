@@ -231,6 +231,18 @@ drink_list = [
             ("ingr", "orangens", 100),
         ]
     }, {
+        "name": "Campari Orange",
+        "recipe": [
+            ("ingr", "campari", 40),
+            ("ingr", "orangens", 60),
+        ]
+    }, {
+        "name": "Campari Tonic",
+        "recipe": [
+            ("ingr", "campari", 20),
+            ("ingr", "tonic", 40),
+        ]
+    }, {
         "name": "Carribean Romance",
         "recipe": [
             ("ingr", "amaretto", 10),
@@ -657,6 +669,21 @@ drink_list = [
             ("ingr", "gga", 60),
         ]
     }, {
+        "name": "Negroni Schützi",
+        "recipe": [
+            ("ingr", "campari", 30),
+            ("ingr", "gren", 10),
+            ("ingr", "zitronenlim", 20),
+            ("ingr", "gin", 30),
+        ]
+    }, {
+        "name": "Oma unterm Arm",
+        "recipe": [
+            ("ingr", "campari", 40),
+            ("ingr", "bacardi", 20),
+            ("ingr", "maracujas", 50),
+        ]
+    }, {
         "name": "Paradiesvogel",
         "recipe": [
             ("ingr", "orangens", 30),
@@ -768,6 +795,12 @@ drink_list = [
             ("ingr", "maracujas", 15),
         ]
     }, {
+        "name": "Shakerato",
+        "recipe": [
+            ("ingr", "campari", 50),
+            ("ingr", "zitronens", 10),
+        ]
+    }, {
         "name": "Shirley Temple",
         "recipe": [
             ("ingr", "zitronenlim", 60),
@@ -819,6 +852,12 @@ drink_list = [
             ("ingr", "cola", 70),
             ("ingr", "orangens", 100),
             ("ingr", "gren", 30),
+        ]
+    }, {
+        "name": "Super Mann",
+        "recipe": [
+            ("ingr", "campari", 40),
+            ("ingr", "maracujas", 15),
         ]
     }, {
         "name": "Sweet Russian",
@@ -916,29 +955,38 @@ drink_list = [
         "name": "Extra Schuss Bacardi",
         "recipe": [("ingr", "bacardi", 20)]
     }, {
-        "name": "Extra Schuss Cranberry Sirup",
-        "recipe": [("ingr", "cranb", 20)]
-    }, {
-        "name": "Extra Schuss Cola",
-        "recipe": [("ingr", "cola", 50)]
+        "name": "Extra Schuss Gin",
+        "recipe": [("ingr", "gin", 20)]
     }, {
         "name": "Extra Schuss Wodka",
         "recipe": [("ingr", "wodka", 20)]
     }, {
-        "name": "Extra Schuss Gin",
-        "recipe": [("ingr", "gin", 20)]
+        "name": "Extra Schuss Curacao",
+        "recipe": [("ingr", "curacao", 20)]
+    }, {
+        "name": "Extra Schuss Grenadine",
+        "recipe": [("ingr", "gren", 10)]
+    }, {
+        "name": "Extra Schuss Cranberry Sirup",
+        "recipe": [("ingr", "cranb", 20)]
+    }, {
+        "name": "Extra Schuss Cola",
+        "recipe": [("ingr", "cola", 40)]
     }, {
         "name": "Extra Schuss Maracujas.",
-        "recipe": [("ingr", "maracujas", 20)]
+        "recipe": [("ingr", "maracujas", 40)]
     }, {
         "name": "Extra Schuss Tonic",
-        "recipe": [("ingr", "tonic", 20)]
+        "recipe": [("ingr", "tonic", 40)]
+    }, {
+        "name": "Extra Schuss Zitr.-Limo",
+        "recipe": [("ingr", "zitronenlim", 40)]
     }, {
         "name": "Extra Schuss Ananass.",
-        "recipe": [("ingr", "ananass", 20)]
+        "recipe": [("ingr", "ananass", 40)]
     }, {
         "name": "Extra Schuss Orangens.",
-        "recipe": [("ingr", "orangens", 50)]
+        "recipe": [("ingr", "orangens", 40)]
     }
 ]
 

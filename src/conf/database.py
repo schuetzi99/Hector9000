@@ -61,6 +61,7 @@ class Database:
         self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('amaretto', 'Amaretto', 1);""")
         self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('gin', 'Gin', 1);""")
         self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('bacardi', 'Bacardi', 1);""")
+        self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('campari', 'Campari', 1);""")
         self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name") VALUES ('curacao', 'Curacao');""")
         #self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('curacao', 'Curacao', 1);""")
         self.cur.execute("""INSERT INTO "Ingredients" ("Code", "Name", "IsAlcoholic") VALUES ('cachaca', 'Cachaca Pitu', 1);""")
@@ -97,7 +98,7 @@ class Database:
       if not self._check_Table_is_Filled('servos'):
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (1, 'curacao');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (2, 'bacardi');""")
-        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (3, 'wodka');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (3, 'campari');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (4, 'gin');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (5, 'zitronens');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (6, 'gga');""")
