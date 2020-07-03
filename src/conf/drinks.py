@@ -105,6 +105,7 @@ drink_list = [
             ("ingr", "ananass", 40),
             ("ingr", "orangens", 40),
             ("ingr", "zitronens", 10),
+            ("ingr", "gren", 10),
         ]
     }, {
         "name": "Baltic",
@@ -548,10 +549,10 @@ drink_list = [
     }, {
         "name": "Little Devil",
         "recipe": [
-            ("ingr", "bacardi", 30),
+            ("ingr", "bacardi", 20),
             ("ingr", "gin", 20),
-            ("ingr", "orangenl", 15),
-            ("ingr", "zitronens", 15),
+            ("ingr", "orangenl", 10),
+            ("ingr", "zitronens", 10),
         ]
     }, {
         "name": "Los Angeles",
@@ -679,9 +680,9 @@ drink_list = [
     }, {
         "name": "Oma unterm Arm",
         "recipe": [
-            ("ingr", "campari", 40),
-            ("ingr", "bacardi", 20),
-            ("ingr", "maracujas", 50),
+            ("ingr", "campari", 30),
+            ("ingr", "bacardi", 15),
+            ("ingr", "maracujas", 70),
         ]
     }, {
         "name": "Paradiesvogel",
@@ -981,6 +982,9 @@ drink_list = [
     }, {
         "name": "Extra Schuss Zitr.-Limo",
         "recipe": [("ingr", "zitronenlim", 40)]
+    }, {
+        "name": "Extra Schuss Zitronens.",
+        "recipe": [("ingr", "zitronens", 15)]
     }, {
         "name": "Extra Schuss Ananass.",
         "recipe": [("ingr", "ananass", 40)]
