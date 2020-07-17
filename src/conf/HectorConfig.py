@@ -5,14 +5,15 @@ config = {
     "hx711": {
         "CLK": 29,
         "DAT": 31,
-        "ref":  869.6761904761905 # calibration yields 100 g <-> readout 214500
+        #"ref":  869.6761904761905 # calibration yields 100 g <-> readout 214500
+        "ref":  450 # calibration yields 100 g <-> readout 214500
     },
     "pca9685": {
         "freq": 60,
         "valvechannels": range(12),  # 0..11
         "valvepositions": [  # (open, closed)
             (375, 535),  # ch 0
-            (375, 570),  # ch 1
+            (375, 560),  # ch 1
             (375, 545),  # ch 2
             (375, 575),  # ch 3
             (375, 580),  # ch 4
