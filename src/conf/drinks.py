@@ -968,6 +968,9 @@ drink_list = [
         "name": "Extra Schuss Grenadine",
         "recipe": [("ingr", "gren", 10)]
     }, {
+        "name": "Extra Schuss Sahne",
+        "recipe": [("ingr", "sahne", 20)]
+    }, {
         "name": "Extra Schuss Cranberry Sirup",
         "recipe": [("ingr", "cranb", 20)]
     }, {

@@ -98,10 +98,10 @@ class Database:
       if not self._check_Table_is_Filled('servos'):
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (1, 'curacao');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (2, 'bacardi');""")
-        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (3, 'campari');""")
-        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (4, 'gin');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (3, 'wodka');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (4, 'pfirsichl');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (5, 'zitronens');""")
-        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (6, 'gga');""")
+        self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (6, 'kokos');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (7, 'orangenl');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (8, 'gren');""")
         self.cur.execute("""INSERT INTO "Servos" ("ServoNr", "Code") VALUES (9, 'zitronenlim');""")
